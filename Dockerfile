@@ -18,7 +18,7 @@ RUN apt-get update \
         python-crypto \
         python-setuptools
 
-RUN curl -L https://bootstrap.pypa.io/get-pip.py | python -
+RUN curl -L http://bootstrap.pypa.io/get-pip.py | python -
 RUN pip install --ignore-installed Mopidy-Iris
 RUN pip install -U six \
     && pip install markerlib \
