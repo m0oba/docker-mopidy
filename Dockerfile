@@ -12,7 +12,6 @@ RUN apt-get update \
         mopidy-scrobbler \
         mopidy-soundcloud \
         mopidy-spotify \
-        mopidy-spotify-tunigo \
         mopidy-tunein \
         git \
         gstreamer1.0-libav \
