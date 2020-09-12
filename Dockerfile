@@ -1,5 +1,4 @@
-FROM debian:jessie
-MAINTAINER Wouter Habets (wouterhabets@gmail.com)
+FROM arm32v7/debian:buster-slim
 
 RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y \
