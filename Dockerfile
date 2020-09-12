@@ -4,9 +4,8 @@ COPY qemu-arm-static /usr/bin
 RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y \
         curl gnupg \
-    && curl -L https://apt.mopidy.com/mopidy.gpg -o /tmp/mopidy.gpg \
+    && curl -L https://apt.mopidy.com/mopidy.gpg | apt-key add - \
     && curl -L https://apt.mopidy.com/mopidy.list -o /etc/apt/sources.list.d/mopidy.list \
-    && apt-key add /tmp/mopidy.gpg \
     && apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y \
         mopidy \
