@@ -1,8 +1,6 @@
 FROM arm32v7/debian:buster-slim
 COPY qemu-arm-static /usr/bin
 RUN apt-get update && apt-get install ca-certificates -y
-COPY ./mycert.crt /usr/local/share/ca-certificates/mycert.crt
-RUN update-ca-certificates
 RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y \
         curl gnupg \
