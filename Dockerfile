@@ -1,6 +1,6 @@
 FROM arm32v7/alpine:latest
 COPY qemu-arm-static /usr/bin
-RUN apk update && apk add ca-certificates && rm -rf /var/cache/apk/*
+RUN apt-get update && apt-get add ca-certificates && rm -rf /var/cache/apk/*
 COPY ./mycert.crt /usr/local/share/ca-certificates/mycert.crt
 RUN update-ca-certificates
 RUN apt-get update \
