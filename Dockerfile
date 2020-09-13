@@ -1,4 +1,4 @@
-FROM arm32v7/alpine:latest
+FROM arm32v7/debian:buster-slim
 COPY qemu-arm-static /usr/bin
 RUN apt-get update && apt-get add ca-certificates && rm -rf /var/cache/apk/*
 COPY ./mycert.crt /usr/local/share/ca-certificates/mycert.crt
