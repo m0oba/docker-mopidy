@@ -16,9 +16,9 @@ RUN apt-get update \
         git \
         gstreamer1.0-libav \
         python-crypto \
-        python-setuptools
+        python-setuptools \
+        python3-pip
 
-RUN curl -L http://bootstrap.pypa.io/get-pip.py | python -
 RUN pip install --ignore-installed Mopidy-Iris
 RUN pip install -U six \
     && pip install markerlib \
