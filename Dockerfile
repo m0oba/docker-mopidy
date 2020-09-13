@@ -18,7 +18,7 @@ RUN apt-get update \
         gstreamer1.0-libav \
         python-crypto \
         python-setuptools \
-        python3-pip
+        python-pip
 
 RUN pip install --ignore-installed Mopidy-Iris
 RUN pip install -U six \
